@@ -1,0 +1,6 @@
+Integer = 100
+Float = 93.23
+Character = M
+String = Madhur
+Boolean = true
+Append text
