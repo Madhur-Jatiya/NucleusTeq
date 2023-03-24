@@ -1,4 +1,4 @@
-package demo;
+package EmployeeManagmentSystem;
 
 public class Employee {
 
