@@ -2,6 +2,7 @@ package BufferReaderExample;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class BufferReaderClass2 {
 
@@ -16,7 +17,7 @@ public class BufferReaderClass2 {
                 data = bufferedReader.read();
             }
             System.out.println("");
-        } catch (Exception e) {
+        } catch (IOException e) {
         }
     }
 }

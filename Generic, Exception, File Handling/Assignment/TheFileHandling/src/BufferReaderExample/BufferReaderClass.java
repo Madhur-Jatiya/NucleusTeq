@@ -15,7 +15,6 @@ public class BufferReaderClass {
                 System.out.println(line);
                 line = bufferedReader.readLine();
             }
-
         } catch (Exception e) {
         }
     }
