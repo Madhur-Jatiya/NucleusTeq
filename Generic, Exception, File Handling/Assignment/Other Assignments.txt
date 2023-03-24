@@ -1,6 +1,0 @@
-Other Assignments
-
-1 Learn about wild cart 
-2 Learn about stringtokenizer
-3 In last question out of 100 number 10 employee name, salary, age and change data in the text file.
-
