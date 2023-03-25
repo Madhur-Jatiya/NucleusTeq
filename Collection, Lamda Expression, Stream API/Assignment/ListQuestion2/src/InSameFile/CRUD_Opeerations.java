@@ -1,8 +1,5 @@
 package InSameFile;
 
-import InMultipleFiles.AddElement;
-import InMultipleFiles.DeleteElement;
-import InMultipleFiles.DisplayElements;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
