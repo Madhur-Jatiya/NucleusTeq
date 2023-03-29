@@ -68,7 +68,7 @@ Count => select count(emp_id) as total_employees from employee;
 
 												Group By and Having
 
-Group By => select course_id,count(student_name) as total_students from student group by course_id;
+Group By => select course_name, count(course_id) as total_students from student join course on student.course_id = course.id  group by course_id;
 Having => select course_id,count(student_name) as total_students from student group by course_id having count(student_name)>5;
 
 
