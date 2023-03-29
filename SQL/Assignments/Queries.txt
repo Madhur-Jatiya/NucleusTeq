@@ -10,6 +10,8 @@
 
 => CREATE TABLE student(id INT PRIMARY KEY AUTO_INCREMENT,student_name VARCHAR(50),course_id INT,FOREIGN KEY (course_id) REFERENCES course (id));
 
+=> CREATE TABLE employee(emp_id INT PRIMARY KEY,name VARCHAR(50),salary DECIMAL(10,2),age INT);
+
 													DESCRIBE TABLES
 
 => desc teacher;
@@ -45,6 +47,17 @@
   (13, 'Rohit Gupta', 2),
   (14, 'Ritu Yadav', 1);
 
+=> INSERT INTO employee (emp_id, name, salary, age) VALUES
+  (1, 'Rajesh Kumar', 50000, 30),
+  (2, 'Priya Gupta', 65000, 35),
+  (3, 'Vikram Singh', 45000, 28),
+  (4, 'Anjali Sharma', 55000, 32),
+  (5, 'Nitin Patel', 60000, 37),
+  (6, 'Shalini Desai', 70000, 40),
+  (7, 'Sanjay Singh', 48000, 29),
+  (8, 'Manisha Choudhary', 52000, 31),
+  (9, 'Amit Kumar', 58000, 36),
+  (10, 'Swati Mehta', 62000, 34);
 												INSERT VALUES IN THE TABLES
 
 
