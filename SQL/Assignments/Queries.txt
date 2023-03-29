@@ -1,0 +1,47 @@
+													CREATE DATABASE
+=> create datbase NucleusTeq;
+=> use NucleusTeq;
+
+													CREATE TABLES
+
+=> CREATE TABLE teacher(id INT PRIMARY KEY AUTO_INCREMENT,teacher_name VARCHAR(50));
+
+=> CREATE TABLE course(id INT PRIMARY KEY AUTO_INCREMENT, course_name VARCHAR(50),teacher_id INT, FOREIGN KEY (teacher_id) REFERENCES teacher (id));
+
+=> CREATE TABLE student(id INT PRIMARY KEY AUTO_INCREMENT,student_name VARCHAR(50),course_id INT,FOREIGN KEY (course_id) REFERENCES course (id));
+
+													DESCRIBE TABLES
+
+=> desc teacher;
+=> desc course;
+=> desc student;
+
+												INSERT VALUES IN THE TABLES
+
+=> INSERT INTO teacher (id, teacher_name) VALUES
+  (1, 'Khan Sir'),
+  (2, 'Prashant Dhawan'),
+  (3, 'Ankit Awasthi');
+
+=> INSERT INTO course (id, course_name, teacher_id) VALUES
+  (1, 'History', 1),
+  (2, 'Geopolitics', 2),
+  (3, 'World Geography', 3);
+
+=> INSERT INTO student (id, student_name, course_id) VALUES
+  (1, 'Madhur Jatiya', 1),
+  (2, 'Anurag Jain', 1),
+  (3, 'Lokesh Nargesh', 2),
+  (4, 'Rani Ahire', 3);
+
+
+
+
+
+
+
+
+
+
+
+
