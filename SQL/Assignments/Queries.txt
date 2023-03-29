@@ -2,21 +2,29 @@
 => create datbase NucleusTeq;
 => use NucleusTeq;
 
+==============================================================================================================
+
 													CREATE TABLES
 
 => CREATE TABLE teacher(id INT PRIMARY KEY AUTO_INCREMENT,teacher_name VARCHAR(50));
 
 => CREATE TABLE course(id INT PRIMARY KEY AUTO_INCREMENT, course_name VARCHAR(50),teacher_id INT, FOREIGN KEY (teacher_id) REFERENCES teacher (id));
 
+=> CREATE TABLE course2(id INT PRIMARY KEY AUTO_INCREMENT, course_name VARCHAR(50),teacher_id INT, FOREIGN KEY (teacher_id) REFERENCES teacher (id));
+
 => CREATE TABLE student(id INT PRIMARY KEY AUTO_INCREMENT,student_name VARCHAR(50),course_id INT,FOREIGN KEY (course_id) REFERENCES course (id));
 
 => CREATE TABLE employee(emp_id INT PRIMARY KEY,name VARCHAR(50),salary DECIMAL(10,2),age INT);
+
+==============================================================================================================
 
 													DESCRIBE TABLES
 
 => desc teacher;
 => desc course;
 => desc student;
+
+==============================================================================================================
 
 												INSERT VALUES IN THE TABLES
 
@@ -30,6 +38,11 @@
   (1, 'History', 1),
   (2, 'Geopolitics', 2),
   (3, 'World Geography', 3);
+
+=> INSERT INTO course2 (id, course_name, teacher_id) VALUES
+  (1, 'JAVA', 3),
+  (2, 'Python', 2),
+  (3, 'MySQL', 3);
 
 => INSERT INTO student (id, student_name, course_id) VALUES
   (1, 'Madhur Jatiya', 1),
@@ -58,6 +71,9 @@
   (8, 'Manisha Choudhary', 52000, 31),
   (9, 'Amit Kumar', 58000, 36),
   (10, 'Swati Mehta', 62000, 34);
+
+==============================================================================================================
+
 												SQL Aggregate Functions
 
 Sum => select sum(salary) as total_salary from employee;
@@ -66,10 +82,14 @@ Max => select max(salary) as higest_salary from employee;
 Avg => select avg(salary) as average_salary from employee;
 Count => select count(emp_id) as total_employees from employee;
 
+==============================================================================================================
+
 												Group By and Having
 
 Group By => select course_name, count(course_id) as total_students from student join course on student.course_id = course.id  group by course_id;
 Having => select course_id,count(student_name) as total_students from student group by course_id having count(student_name)>5;
+
+==============================================================================================================
 
 													Joins
 
@@ -77,8 +97,14 @@ Natural Join => select student_name, course_name from student natural join cours
 Inner Join => select student_name, course_name from student inner join course on student.id = course.id;
 Left Join => select student_name, course_name from student left join course on student.id = course.id;
 Right Join => select student_name, course_name from student right join course on student.id = course.id;
-Cross Join => select student_name, course_name from student cross join course on student.id = course.id;
+Cross Join => select student_name, course_name from student cross join course;
 
+==============================================================================================================
 
+													Unions
 
+Union => Select * from course1 union select * from course2;
+Union All => Select * from course1 union all select * from course2;
+
+==============================================================================================================
 
