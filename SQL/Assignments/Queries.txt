@@ -71,7 +71,13 @@ Count => select count(emp_id) as total_employees from employee;
 Group By => select course_name, count(course_id) as total_students from student join course on student.course_id = course.id  group by course_id;
 Having => select course_id,count(student_name) as total_students from student group by course_id having count(student_name)>5;
 
+													Joins
 
+Natural Join => select student_name, course_name from student natural join course;
+Inner Join => select student_name, course_name from student inner join course on student.id = course.id;
+Left Join => select student_name, course_name from student left join course on student.id = course.id;
+Right Join => select student_name, course_name from student right join course on student.id = course.id;
+Cross Join => select student_name, course_name from student cross join course on student.id = course.id;
 
 
 
