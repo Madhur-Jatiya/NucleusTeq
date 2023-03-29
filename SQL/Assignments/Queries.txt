@@ -58,7 +58,7 @@
   (8, 'Manisha Choudhary', 52000, 31),
   (9, 'Amit Kumar', 58000, 36),
   (10, 'Swati Mehta', 62000, 34);
-												INSERT VALUES IN THE TABLES
+												SQL Aggregate Functions
 
 
 
