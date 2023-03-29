@@ -61,7 +61,11 @@
 												SQL Aggregate Functions
 
 
-
+Sum => select sum(salary) as total_salary from employee;
+Min => select min(salary) as lowest_salary from employee;
+Max => select max(salary) as higest_salary from employee;
+Avg => select avg(salary) as average_salary from employee;
+Count => select count(emp_id) as total_employees from employee;
 
 
 
