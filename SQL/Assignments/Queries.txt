@@ -108,3 +108,17 @@ Union All => Select * from course1 union all select * from course2;
 
 ==============================================================================================================
 
+													Windows Functions
+
+Over => Select items, avg(sold) over() as Average_Solds from orders;
+	 => Select items, avg(sold) over() as Average_Solds, avg(price) over() as Average_Price from orders;
+
+Over / Partition By => Select items, avg(sold) over(partition by items) as Average_Solds from orders;
+
+Over / Partition By / Order By => Select items, avg(price) over(partition by items,items order by sold) as Average_Price, sold from orders;
+
+
+==============================================================================================================
+
+													Windows Functions
+
