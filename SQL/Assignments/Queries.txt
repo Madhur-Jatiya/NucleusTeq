@@ -125,7 +125,20 @@ Over with Partition By => select *, sum(price) over(partition by items) as total
 
 Over with Partition By and Order By => select *, sum(price) over(partition by items, items order by sold) as total_price_of_all_products from orders;
 
+					------------------------------------------------------------------------------
+
+													Ranking Functions
+
+Rank => select items, sold, rank() over(order by sold desc) as Sold_Rank from orders;
+Dense Rank => select items, sold, dense_rank() over(order by sold desc) as Sold_Rank from orders;
+Row Number => select items, sold, row_number() over() as Sold_Rank from orders;
+
+					------------------------------------------------------------------------------
+
+													Analitics Functions
+
 ==============================================================================================================
 
-													Windows Functions
+															End
+
 
