@@ -117,6 +117,13 @@ Over / Partition By => Select items, avg(sold) over(partition by items) as Avera
 
 Over / Partition By / Order By => Select items, avg(price) over(partition by items,items order by sold) as Average_Price, sold from orders;
 
+													More Examples
+
+Over => select *, sum(price) over() as total_price_of_all_products from orders;
+
+Over with Partition By => select *, sum(price) over(partition by items) as total_price_of_all_products from orders;
+
+Over with Partition By and Order By => select *, sum(price) over(partition by items, items order by sold) as total_price_of_all_products from orders;
 
 ==============================================================================================================
 
