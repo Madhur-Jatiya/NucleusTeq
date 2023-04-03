@@ -137,6 +137,33 @@ Row Number => select items, sold, row_number() over() as Sold_Rank from orders;
 
 													Analitics Functions
 
+First_Value => select *, first_value(sold) over() as first__value from orders;
+	=> select *, first_value(sold) over(order by sold) as first__value from orders;
+	=> select *, first_value(sold) over(partition by items,items order by sold) as first__value from orders;
+
+Last_Value => select *, last_value(sold) over() as last__value from orders;
+	=> select *, last_value(sold) over(partition by items) as last__value from orders;
+	=> select *, last_value(sold) over(partition by items,items order by sold) as last__value from orders; (doubt)
+
+nth_Value => select *, nth_value(sold,3) over() as n_value from orders;
+	=> select *, nth_value(sold,2) over(partition by items) as n_value from orders;
+	=> select *, nth_value(sold,2) over(partition by items,items order by sold) as n_value from orders;
+	=> select *, nth_value(sold,13) over(order by sold) as n_value from orders; (doubt)
+
+lead => select *,lead(price) over() as leads from orders;
+	=> select items, price,lead(price,1) over() as Lead_Price from orders;
+	=> select items, price,lead(price) over(order by price) as Lead_Price from orders;
+	=> select items, price,lead(price,5,500) over(order by price) as Lead_Price from orders;
+
+lag => select items, price,lag(price) over() as Lag_Price from orders;
+	=> select items, price,lag(price,1) over() as Lag_Price from orders;
+	=> select items, price,lag(price,6) over(order by price) as Lag_Price from orders;
+	=> select items, price,lag(price,6,200) over(order by price) as Lag_Price from orders;
+
+ntile => select *, ntile(3) over(order by price) as ntiles from orders;
+	=> select *, ntile(3) over(partition by items) as ntiles from orders;
+	=> select *, ntile(3) over(partition by items, items order by sold) as ntiles from orders;
+
 ==============================================================================================================
 
 															End
