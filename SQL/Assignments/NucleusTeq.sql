@@ -96,6 +96,33 @@ INSERT INTO `employee` VALUES (1,'Madhur Jatiya',50000.00,30),(2,'Lokesh Nargesh
 UNLOCK TABLES;
 
 --
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `Id` int NOT NULL,
+  `Items` varchar(255) NOT NULL,
+  `Price` decimal(10,2) NOT NULL,
+  `Sold` int NOT NULL,
+  `Month` varchar(10) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'Tea',10.00,50,'Jan'),(2,'Coffee',20.00,30,'Jan'),(3,'Pizza',100.00,25,'Feb'),(4,'Burger',50.00,20,'Mar'),(5,'Ice Cream',100.00,15,'Mar'),(6,'Biscuit',15.00,10,'Apr'),(7,'Cold Drink',20.00,8,'Apr'),(8,'Tea',10.00,12,'May'),(9,'Coffee',20.00,18,'May'),(10,'Pizza',100.00,22,'Jun'),(11,'Burger',50.00,40,'Jun'),(12,'Ice Cream',100.00,12,'Jul'),(13,'Biscuit',15.00,3,'Jul'),(14,'Cold Drink',20.00,8,'Aug'),(15,'Tea',10.00,5,'Aug'),(16,'Coffee',20.00,2,'Sep'),(17,'Burger',50.00,10,'Sep'),(18,'Ice Cream',100.00,18,'Oct'),(19,'Biscuit',15.00,35,'Oct'),(20,'Cold Drink',20.00,15,'Nov');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `student`
 --
 
@@ -155,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-30  2:03:49
+-- Dump completed on 2023-04-03 21:39:33
