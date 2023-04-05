@@ -15,6 +15,8 @@ public class App {
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 
+//===============================================================================================================================
+
 		// Add Employees
 
 //		Employee emp1 = new Employee();
@@ -41,6 +43,8 @@ public class App {
 //		emp4.setMobile(7221098765L);
 //		emp4.setSalary(698955.58);
 
+//===============================================================================================================================
+
 		// get an Employee
 
 //		Employee employee = session.get(Employee.class, 1);
@@ -51,11 +55,10 @@ public class App {
 //		ArrayList<Employee> employees = (ArrayList<Employee>) session.createQuery("from Employee").list();
 //		for (Employee employee : employees)
 //			System.out.println(employee);
-		
 
 		// update Employee
 
-			// method 1
+		// method 1
 
 //		Employee emp5 = session.get(Employee.class, 6);
 //		emp5.setName("Anurag Jain");
@@ -68,10 +71,19 @@ public class App {
 
 //		Query q = session.createQuery("update Employee set name = 'Akash', email = 'akash@gmail.com', mobile = 1234567892L where id = 5");
 //		q.executeUpdate();
-		
-		//delete an employee
-		
-		Query q = session.createQuery("delete from Employee");
+
+//===============================================================================================================================		
+
+		// delete all Employees
+
+//		Query q = session.createQuery("delete from Employee");
+
+		// delete an Employee
+
+		Query q = session.createQuery("delete from Employee where id = 4");
+		q.executeUpdate();
+
+//===============================================================================================================================
 
 //		session.save(emp1);
 //		session.save(emp2);
