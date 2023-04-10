@@ -52,9 +52,9 @@ public class App {
 
 		// get all Employees
 
-//		ArrayList<Employee> employees = (ArrayList<Employee>) session.createQuery("from Employee").list();
-//		for (Employee employee : employees)
-//			System.out.println(employee);
+		ArrayList<Employee> employees = (ArrayList<Employee>) session.createQuery("from Employee").list();
+		for (Employee employee : employees)
+			System.out.println(employee);
 
 		// update Employee
 
@@ -80,8 +80,8 @@ public class App {
 
 		// delete an Employee
 
-		Query q = session.createQuery("delete from Employee where id = 4");
-		q.executeUpdate();
+//		Query q = session.createQuery("delete from Employee where id = 4");
+//		q.executeUpdate();
 
 //===============================================================================================================================
 
