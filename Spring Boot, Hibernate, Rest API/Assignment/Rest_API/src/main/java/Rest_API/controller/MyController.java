@@ -28,8 +28,13 @@ public class MyController {
 	}
 
 	@GetMapping("/courses/{courseId}")
-	public Course getCourse(@PathVariable String courseId) {
-		return courseServices.getCourse(Integer.parseInt(courseId));
+	public Object getCourse(@PathVariable int courseId) {
+		Course existingCourse = courseServices.getCourse(courseId);
+		if (existingCourse != null) {
+			return courseServices.getCourse(courseId);
+		} else {
+			return "Course id not found";
+		}
 	}
 
 	@PostMapping("/courses")
@@ -38,12 +43,12 @@ public class MyController {
 	}
 
 	@PutMapping("/courses/{courseId}")
-	public Course updateCourse(@PathVariable int courseId, @RequestBody Course course) {
+	public Object updateCourse(@PathVariable int courseId, @RequestBody Course course) {
 		Course existingCourse = courseServices.getCourse(courseId);
 		if (existingCourse != null) {
 			return courseServices.updateCourse(existingCourse, course);
 		} else {
-			return null;
+			return "Course id not found";
 		}
 	}
 
