@@ -9,6 +9,6 @@ Here Records of All NucleusTeq Meetings
 [Week 6](https://github.com/Madhur-Jatiya/NucleusTeq/tree/week6) - Collection, Lamda Expression, Stream API (by Priyanka) <br>
 [Week 7](https://github.com/Madhur-Jatiya/NucleusTeq/tree/week7) - SQL (by Nakul) <br>
 [Week 8](https://github.com/Madhur-Jatiya/NucleusTeq/tree/week8) - Spring Boot, Hibernate, Rest API (by Hardik and Priyanka) <br>
-Stand Up Meet (by Sagar) <br>
+[Stand Up Meet](https://github.com/Madhur-Jatiya/NucleusTeq/tree/Stand_Up_Meet) - Discussion (by Sagar) <br>
 
 ![nucleusteq black](https://user-images.githubusercontent.com/70679523/227516319-5db3d3a3-b1c6-48ae-9ab8-53ea5570e717.png)
