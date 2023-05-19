@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration Page</title>
+	<style>
+		body {
+			background-color: #f8c86b;
+			padding: 100px;
+			margin: 0px;
+			height: 36vh;
+		}
+
+		.registration-form {
+			width: 650px;
+			margin: 0 auto;
+			padding: 0px;
+			background-color: white;
+			border-radius: 10px;
+
+		}
+
+		.registration-form h1 {
+			text-align: left;
+			padding-top: 20px;
+			padding-left: 30px;
+		}
+
+		.i {
+			width: 80%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			margin-left: 20px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.registration-form button {
+			background-color: #f8c86b;
+			color: white;
+			padding: 10px 20px;
+			margin-top: 10px;
+			border: none;
+			cursor: pointer;
+			margin-bottom: 50px;
+			border-radius: 5px;
+			margin-left: 30px;
+			width: 90%;
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+		.l {
+			display: block;
+			text-align: left;
+			padding-left: 20px;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.column {
+			float: left;
+			width: 50%;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.gender-field {
+			text-align: left;
+		}
+
+		.gender-field input {
+			margin-left: 80px;
+			margin-top: 5px;
+			margin-bottom: 15px;
+		}
+
+		.gender {
+			margin-left: 25px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<body>
+		<form action="/register" method="post">
+			<div class="registration-form">
+				<h1><span style="text-decoration: underline #f8c86b;">Re</span>gistration</h1>
+				<div>
+					<div class="row">
+						<div class="column">
+							<label for="fullname" class="l">Full Name</label>
+							<input type="text" name="fullname" id="fullname" placeholder="Enter your name" class="i"
+								required>
+							<label for="email" class="l">Email</label>
+							<input type="email" name="email" id="email" placeholder="Enter your email" class="i"
+								required>
+							<label for="password" class="l">Password</label>
+							<input type="password" name="password" id="password" placeholder="Enter your password"
+								class="i" required>
+						</div>
+						<div class="column">
+							<label for="username" class="l">Username</label>
+							<input type="text" name="username" id="username" placeholder="Enter your username" class="i"
+								required>
+							<label for="mobile" class="l">Mobile</label>
+							<input type="text" name="mobile" id="mobile" placeholder="Enter your number" class="i"
+								required>
+							<label for="confirm-password" class="l">Confirm Password</label>
+							<input type="password" name="confirmPassword" id="confirm-password"
+								placeholder="Confirm your password" class="i" required>
+							<span id="password-error-message" style="color: red;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="gender-field">
+					<label class="gender">Gender</label> <br>
+					<label for="gender-male">
+						<input type="radio" id="gender-male" name="gender" value="male"> Male
+					</label>
+					<label for="gender-female">
+						<input type="radio" id="gender-female" name="gender" value="female"> Female
+					</label>
+					<label for="gender-not-specified">
+						<input type="radio" id="gender-not-specified" name="gender" value="other"> Prefer Not to Say
+					</label>
+				</div>
+				<button type="submit">Register</button>
+			</div>
+
+			<script>
+				var passwordField = document.getElementById("password");
+				var confirmPasswordField = document.getElementById("confirm-password");
+				var errorMessage = document.getElementById("password-error-message");
+
+				confirmPasswordField.addEventListener("input", function () {
+					var passwordValue = passwordField.value;
+					var confirmPasswordValue = confirmPasswordField.value;
+
+					if (passwordValue !== confirmPasswordValue) {
+						errorMessage.textContent = "Passwords do not match";
+					} else {
+						errorMessage.textContent ="";
+					}
+				});
+			</script>
+		</form>
+
+	</body>
+
+</html>

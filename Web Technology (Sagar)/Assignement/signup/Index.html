@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- <form action="login.html" method="get"> -->
+    <form action="/register" method="get">
+        <div class="registration-form">
+            <h1><span style="text-decoration: underline #f8c86b;">Re</span>gistration</h1>
+            <div>
+                <div class="row">
+                    <div class="column">
+                        <label for="fullname" class="l">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your name" class="i"
+                            required>
+                        <label for="email" class="l">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" class="i" required>
+                        <label for="password" class="l">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" class="i"
+                            required>
+                    </div>
+                    <div class="column">
+                        <label for="username" class="l">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Enter your username" class="i"
+                            required>
+                        <label for="mobile" class="l">Mobile</label>
+                        <input type="text" name="mobile" id="mobile" placeholder="Enter your number" class="i" required>
+                        <label for="confirm-password" class="l">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirm-password"
+                            placeholder="Confirm your password" class="i" required>
+                        <span id="password-error-message" style="color: red;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gender-field">
+                <label class="gender">Gender</label> <br>
+                <label for="gender-male">
+                    <input type="radio" id="gender-male" name="gender" value="male"> Male
+                </label>
+                <label for="gender-female">
+                    <input type="radio" id="gender-female" name="gender" value="female"> Female
+                </label>
+                <label for="gender-not-specified">
+                    <input type="radio" id="gender-not-specified" name="gender" value="other"> Prefer Not to Say
+                </label>
+            </div>
+            <button type="submit">Register</button>
+        </div>
+
+        <script>
+            var passwordField = document.getElementById("password");
+            var confirmPasswordField = document.getElementById("confirm-password");
+            var errorMessage = document.getElementById("password-error-message");
+
+            confirmPasswordField.addEventListener("input", function () {
+                var passwordValue = passwordField.value;
+                var confirmPasswordValue = confirmPasswordField.value;
+
+                if (passwordValue !== confirmPasswordValue) {
+                    errorMessage.textContent = "Passwords do not match";
+                } else {
+                    errorMessage.textContent = "";
+                }
+            });
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+body {
+    background-color: #f8c86b;
+    padding: 100px;
+    margin: 0px;
+    height: 36vh;
+}
+
+.registration-form {
+    width: 650px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.registration-form h1 {
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.i {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.registration-form button {
+    background-color: #f8c86b;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 90%;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.l {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.gender-field {
+    text-align: left;
+}
+
+.gender-field input {
+    margin-left: 80px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.gender {
+    margin-left: 25px;
+    font-weight: bold;
+}

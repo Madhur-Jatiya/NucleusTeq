@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #f8c86b;
+            padding: 120px;
+            margin: 0px;
+        }
+
+        .registration-form {
+            width: 400px;
+            margin: 0 auto;
+            padding: 0px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .registration-form h1 {
+            text-align: left;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+
+        .i {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .l {
+            display: block;
+            text-align: left;
+            padding-left: 50px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .registration-form button {
+            background-color: #f8c86b;
+            color: white;
+            padding: 15px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            width: 80%;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="login" method="post">
+        <div class="registration-form">
+            <h1><span style="text-decoration: underline #f8c86b;">Lo</span>gin</h1>
+            <div>
+                <label for="username" class="l">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" class="i" required>
+
+                <label for="password" class="l">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" class="i"
+                    required>
+            </div>
+
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+
+</html>
